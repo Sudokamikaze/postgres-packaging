@@ -23,7 +23,7 @@
 +%define        debug_package %{nil}
 +Name:          percona-patroni
 +Version:       2.0.1
-+Release:       2%{dist}
++Release:       3%{dist}
 +Epoch:         1
  License:       MIT
  Summary:       PostgreSQL high-availability manager
@@ -34,7 +34,7 @@
  Patch1:        better-startup-script.patch
  BuildRoot:     %{_tmppath}/%{buildprefix}-buildroot
  Requires:      python3, python3-psycopg2 >= 2.5.4, libffi, postgresql-server, libyaml
-+Requires:      /usr/bin/python3.6, libffi, postgresql-server, libyaml, postgresql11-server
++Requires:      /usr/bin/python3.6, libffi, postgresql-server, libyaml, postgresql13-server
  BuildRequires: prelink libyaml-devel gcc
  Requires(post): %{_sbindir}/update-alternatives
  Requires(postun):       %{_sbindir}/update-alternatives

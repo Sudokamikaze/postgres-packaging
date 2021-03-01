@@ -10,9 +10,9 @@ else ifneq ($(findstring pgdg,$(VERSION)),)
 else
 	FLAVOR := default
 endif
-SUPPORTED_VERSIONS := 11
+SUPPORTED_VERSIONS := 13
 DEFAULT_VER := $(lastword $(SUPPORTED_VERSIONS))
-DEFAULT_VER := 11
+DEFAULT_VER := 13
 LIBREADLINE := $(shell dpkg-query -W --showformat '$${Status} $${Package}\n' 'libreadline[0-9]'| sed -n '/ installed / {s/^.* //; p}'|sort -ru | head -n1)
 
 #py2#PYTHON2_PACKAGE=percona-postgresql-plpython-$v
